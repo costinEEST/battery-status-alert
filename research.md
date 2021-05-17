@@ -1,0 +1,3 @@
+- https://gadgetstouse.com/blog/2020/10/21/check-android-phone-battery-health-prevent-degradation
+- https://developer.android.com/training/monitoring-device-state/battery-monitoring
+- https://stackoverflow.com/questions/44920299/react-native-get-battery-status-level-using-native-modules
