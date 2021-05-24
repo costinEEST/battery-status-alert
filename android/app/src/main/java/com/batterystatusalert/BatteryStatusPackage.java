@@ -1,4 +1,4 @@
-package com.batterystatusalert.BatteryStatusModule;
+package com.batterystatusalert;
 
 import com.facebook.react.ReactPackage;
 //import com.facebook.react.bridge.JavaScriptModule;

@@ -1,4 +1,4 @@
-import com.batterystatusalert;
+package com.batterystatusalert;
 
 import android.content.Intent;
 import android.content.IntentFilter;
