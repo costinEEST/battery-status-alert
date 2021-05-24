@@ -1,19 +1,12 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- *
- * @format
- * @flow strict-local
- */
+import React, {useState, useEffect} from 'react';
 
-import React from 'react';
-import type {Node} from 'react';
 import {
   SafeAreaView,
   ScrollView,
   StatusBar,
   StyleSheet,
   Text,
+  NativeModules,
   useColorScheme,
   View,
 } from 'react-native';
@@ -26,7 +19,7 @@ import {
   ReloadInstructions,
 } from 'react-native/Libraries/NewAppScreen';
 
-const Section = ({children, title}): Node => {
+const Section = ({children, title}) => {
   const isDarkMode = useColorScheme() === 'dark';
   return (
     <View style={styles.sectionContainer}>
@@ -52,7 +45,21 @@ const Section = ({children, title}): Node => {
   );
 };
 
-const App: () => Node = () => {
+export const App = () => {
+  const [batteryLevel, setBatteryLevel] = useState();
+
+  const getBatteryLevel = callback => {
+    NativeModules.BatteryStatus.getBatteryStatus(callback);
+  };
+
+  useEffect(() => {
+    getBatteryLevel(status => {
+      console.log(status);
+
+      setBatteryLevel(status);
+    });
+  }, []);
+
   const isDarkMode = useColorScheme() === 'dark';
 
   const backgroundStyle = {
@@ -74,6 +81,7 @@ const App: () => Node = () => {
             Edit <Text style={styles.highlight}>App.js</Text> to change this
             screen and then come back to see your edits.
           </Section>
+          <Section title="Battery level: ">{batteryLevel}</Section>
           <Section title="See Your Changes">
             <ReloadInstructions />
           </Section>
@@ -108,5 +116,3 @@ const styles = StyleSheet.create({
     fontWeight: '700',
   },
 });
-
-export default App;

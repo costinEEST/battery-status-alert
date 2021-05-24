@@ -1,3 +1,10 @@
 - https://gadgetstouse.com/blog/2020/10/21/check-android-phone-battery-health-prevent-degradation
 - https://developer.android.com/training/monitoring-device-state/battery-monitoring
 - https://stackoverflow.com/questions/44920299/react-native-get-battery-status-level-using-native-modules
+- https://dev.to/pandiarajan_n/how-to-create-and-add-nativemodules-in-react-native-using-java-2a93
+- https://medium.com/@loons.create/how-to-setup-react-native-background-timer-22263d655847
+- https://codeburst.io/the-definitive-guide-to-react-native-background-processing-51df02540433
+- https://medium.com/the-sixt-india-blog/how-to-run-a-background-task-in-react-native-cd4d36e40bf
+- https://stackoverflow.com/questions/35376690/how-can-i-run-background-tasks-in-react-native
+- [Failed to implement this library into latest version of React Native.](https://github.com/oojr/react-native-battery/issues/21)
+- [Battery doest not work when app in background](https://github.com/robinpowered/react-native-device-battery/issues/21#issuecomment-449485129)
